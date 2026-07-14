@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/rl-lang/rl-lang/main/logo-circle.svg" width="200">
+  <img src="https://raw.githubusercontent.com/rl-lang/rl-lang/main/assets/logo-circle.svg" width="200">
   <h1>rl-lang</h1>
   <p>A language that is fast to write, simple to read, built in Rust from the ground up.</p>
 </div>
