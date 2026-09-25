@@ -88,6 +88,14 @@ println(collatz(27))       // 111
 |------|-------------|
 | [.github](https://github.com/rl-lang/.github) | Org profile, templates, and shared workflows (this repo) |
 
+### Packaging
+
+| Repo | Description |
+|------|-------------|
+| [rl-pack-linux](https://github.com/rl-lang/rl-pack-linux) | Linux packaging: deb, rpm, AUR, Gentoo, Nix, Snap, Flatpak |
+| [homebrew-rl](https://github.com/rl-lang/homebrew-rl) | Homebrew tap: `brew tap rl-lang/rl && brew install rl-lang` |
+| [rl-pack-windows](https://github.com/rl-lang/rl-pack-windows) | Windows packaging: Chocolatey and WinGet |
+
 ## Installation
 
 Prebuilt binaries ship with every [release](https://github.com/rl-lang/rl-lang/releases):
