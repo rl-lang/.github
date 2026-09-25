@@ -64,6 +64,8 @@ println(collatz(27))       // 111
 | Repo | Description |
 |------|-------------|
 | [vscode-rl-lang](https://github.com/rl-lang/vscode-rl-lang) | Full VS Code support: highlighting, LSP, run/check/format/package commands |
+| [rl-zed-extension](https://github.com/rl-lang/rl-zed-extension) | RL support for Zed: tree-sitter highlighting plus `rlsp` diagnostics |
+| [rl-textmate](https://github.com/rl-lang/rl-textmate) | Canonical TextMate grammar (`.rl`) shared by VS Code, JetBrains, and Linguist |
 | [tree-sitter-rl](https://github.com/rl-lang/tree-sitter-rl) | Tree-sitter grammar for Helix, Neovim, Zed, and more |
 
 ### Systems
