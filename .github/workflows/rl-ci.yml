@@ -1,0 +1,70 @@
+# Reusable RL CI for small repos.
+#
+# Callers get check + format on every push/PR, tests on demand, with no
+# Rust toolchain and no copied YAML. Example caller (.github/workflows/ci.yml):
+#
+#   name: ci
+#   on: [push, pull_request]
+#   jobs:
+#     rl:
+#       uses: rl-lang/.github/.github/workflows/rl-ci.yml@main
+#       with:
+#         check-path: src
+#         test-enabled: true
+#         test-path: tests
+name: rl-ci
+on:
+  workflow_call:
+    inputs:
+      rl-version:
+        description: RL version (latest, nightly, or vX.Y.Z)
+        type: string
+        default: latest
+      check-enabled:
+        description: Run rl check
+        type: boolean
+        default: true
+      check-path:
+        description: File or folder for rl check
+        type: string
+        default: .
+      test-enabled:
+        description: Run rl test
+        type: boolean
+        default: false
+      test-path:
+        description: File or folder for rl test
+        type: string
+        default: .
+      format-enabled:
+        description: Check rl format
+        type: boolean
+        default: true
+      format-path:
+        description: File or folder for rl format
+        type: string
+        default: .
+
+jobs:
+  rl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check
+        if: inputs.check-enabled
+        uses: rl-lang/rl-check@main
+        with:
+          version: ${{ inputs.rl-version }}
+          folder: ${{ inputs.check-path }}
+      - name: Test
+        if: inputs.test-enabled
+        uses: rl-lang/rl-test@main
+        with:
+          version: ${{ inputs.rl-version }}
+          folder: ${{ inputs.test-path }}
+      - name: Format
+        if: inputs.format-enabled
+        uses: rl-lang/rl-format@main
+        with:
+          version: ${{ inputs.rl-version }}
+          folder: ${{ inputs.format-path }}

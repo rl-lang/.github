@@ -1,0 +1,33 @@
+name: Feature request
+description: Propose something new for RL
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem first
+      description: What can you not do today, and who else hits it?
+    validations:
+      required: true
+  - type: textarea
+    id: shape
+    attributes:
+      label: Proposed shape
+      description: Sketch of syntax, commands, or behavior. Examples help.
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - language syntax
+        - stdlib
+        - CLI / tooling
+        - editor support
+        - packaging / install
+        - docs
+        - other
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What did you try instead, and why was it not enough?
