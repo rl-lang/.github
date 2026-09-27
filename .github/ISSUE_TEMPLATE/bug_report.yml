@@ -7,7 +7,7 @@ body:
     attributes:
       label: RL version
       description: Output of `rl --version`
-      placeholder: 2.2.1
+      placeholder: 2.3.0
     validations:
       required: true
   - type: dropdown
